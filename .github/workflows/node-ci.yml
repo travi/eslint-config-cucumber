@@ -25,7 +25,7 @@ jobs:
         uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3.8.2
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
-      - uses: bahmutov/npm-install@c46e3830503dcb831cf4aee3f26b4e6bce8cc9d2 # v1.8.35
+      - uses: bahmutov/npm-install@2509f13e8485d88340a789a3f7ca11aaac47c9fc # v1.8.36
       - run: npm test
   release:
     needs: verify
@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3.8.2
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
-      - uses: bahmutov/npm-install@c46e3830503dcb831cf4aee3f26b4e6bce8cc9d2 # v1.8.35
+      - uses: bahmutov/npm-install@2509f13e8485d88340a789a3f7ca11aaac47c9fc # v1.8.36
       - name: semantic-release
         run: npx semantic-release
         env:
